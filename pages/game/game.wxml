@@ -1,0 +1,18 @@
+<!--pages/game/game.wxml-->
+<view class=''>
+<!--搜索框-->
+  <view class='search'>
+    <view class='search-content'>
+      <view class='' style='flex-grow:1'>sd</view>
+      <view class='' style='flex-grow:20'>sdfsd</view>
+    </view>
+    
+  </view>
+  <!--中间内容-->
+  <view>
+  <!--游戏列表-->
+    <view></view>
+    <!--字母搜索-->
+    <view></view>
+  </view>
+</view>

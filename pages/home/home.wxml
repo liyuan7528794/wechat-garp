@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml-->
+<view class="main">
+  <swiper indicator-dots="true" class='swiper-scroll' autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+    <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{item}}" class="" width="100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="notice">
+    <image src="{{homeNoticeImg}}" class="notice-img" />
+    <text class="notice-content">2018年7月18日12：30时 *****租号成功！</text>
+  </view>
+  <view class='view-xian' />
+  <view class="tab-list">
+    <view wx:for="{{tabList}}" class="tab-item {{curTab===index ? 'selected-tab':''}}" data-index="{{index}}" bindtap="selectTab">{{item.name}}
+
+    </view>
+
+  </view>
+  <swiper current="{{current}}" class='swiper-tab-item' bindchange="swiperChange">
+    <block wx:for="{{tabList}}">
+      <swiper-item>
+        <view class='recommend_container'>
+          <view class='recommend_item' wx:for="{{recommends}}" wx:for-index="idx" data-index='{{recommend.id}}' wx:for-item="recommend" id='{{recommend.id}}' bindtap='btn'>
+
+            <image class='recommend_img' src='{{recommend.pic_url}}' />
+            <view class='recommend_name'>{{recommend.name}}</view>
+
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view>
+    <image src='{{homehuodong}}' class='home-hongdong-img' />
+  </view>
+</view>

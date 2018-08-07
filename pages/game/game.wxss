@@ -1,0 +1,4 @@
+/* pages/game/game.wxss */
+
+.search {background-color: #ececec;height: 85rpx;}
+.search-content {display: flex;flex-direction: row;justify-content:center;padding: 10rpx;}
